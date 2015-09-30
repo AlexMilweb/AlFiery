@@ -2,10 +2,11 @@
 // variables
 
 // grid
+$small = 320px
 $phone = 640px
 $tablet = 1024px
-$desktop = 1279px
-$xdesktop = 1599px
+$desktop = 1280px
+$xdesktop = 1600px
 $xxldesktop = 1980px
 
 //colors
@@ -15,6 +16,28 @@ body
 	font-family: 'robotoregular'
 	font-size: 14px
 	color: #333
+	min-width: 320px
+	main.wrap
+		display: flex
+		flex-direction: column
+		margin: 0 auto
+
+// adaptive
+@media (max-width: $xxldesktop)
+	main.wrap
+		width: $xdesktop
+@media (max-width: $xdesktop)
+	main.wrap
+		width: $desktop
+@media (max-width: $desktop)
+	main.wrap
+		width: $tablet
+@media (max-width: $tablet)
+	main.wrap
+		width: $phone
+@media (max-width: $phone)
+	main.wrap
+		width: 90%
 
 
-// @import '../blocks/*'
+@import '../blocks/*'
