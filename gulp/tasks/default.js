@@ -11,8 +11,6 @@ gulp.task('main', function(cb) {
 					['images',
 					'font',
 					'_images',
-					'index',
-					'doc'
 					], 'jade', cb);
 });
 
@@ -21,16 +19,16 @@ gulp.task('default', function(cb) {
 });
 
 
-gulp.task('build', function(cb) {
-	runSequence('del',
-				'sass',
-				'stylus',
-				'app',
-				'concat',
-					['images',
-					'font',
-					'_images',
-					'index',
-					'doc'
-					], 'buildjade', 'watchBuild', 'server', cb);
-});
+// gulp.task('build', function(cb) {
+// 	runSequence('del',
+// 				'sass',
+// 				'stylus',
+// 				'app',
+// 				'concat',
+// 					['images',
+// 					'font',
+// 					'_images',
+// 					'index',
+// 					'doc'
+// 					], 'buildjade', 'server', cb);
+// });

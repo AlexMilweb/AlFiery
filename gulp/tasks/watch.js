@@ -11,13 +11,7 @@ gulp.task('watch', function() {
   gulp.watch('assets/_img/**', ['_images']);
   gulp.watch('assets/font/*', ['font']);
   gulp.watch('assets/app/*.styl', ['stylus']);
-  gulp.watch('assets/pages/index.jade', ['index']);
   gulp.watch('assets/pages/*.jade', ['jade']);
   gulp.watch('assets/docs/**', ['jade']);
   gulp.watch('assets/docs/**', ['stylus']);
-  gulp.watch('assets/docs/**/*.*', ['docsFile']);
-});
-
-gulp.task('watchBuild', function() {
-  gulp.watch('assets/app/no-flexbox.styl',['stylusNoFlexbox']);
 });
