@@ -1,3 +1,143 @@
+@keyframes luminousLine {
+	0% {
+		width: 0%
+	}
+	100% {
+		width: 50%
+	}
+}
+@keyframes photoAnim {
+	0% {
+		transform: rotateX(90deg)
+	}
+	50% {
+		transform: rotateX(0deg)
+	}
+	75% {
+		transform: rotateX(90deg)
+	}
+	100% {
+		transform: rotateX(0deg)
+	}
+}
+@keyframes showObject {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
 .header
 	height: 400px
-	background-color: red
+	position: relative
+	background-color: #0F0F0F
+	&:before
+		display: block
+		content: ''
+		position: absolute
+		left: 0
+		height: 4px
+		width: 0%
+		background-color: #41FFD0
+		box-shadow: 0 0 25px 2px #41FFD0
+		top: 198px
+		animation: luminousLine 1s linear
+		animation-fill-mode: forwards
+	&:after
+		display: block
+		content: ''
+		position: absolute
+		right: 49%
+		height: 20px
+		width: 20px
+		background-color: #41FFD0
+		box-shadow: 0 0 25px 2px #41FFD0
+		top: 190px
+		border-radius: 50%
+		opacity: 0
+		animation: showObject .5s linear
+		animation-fill-mode: forwards
+		animation-delay: 1s
+	&__wrap
+		display: flex
+		justify-content: space-between
+		height: 400px
+	&__myPhoto
+		flex: 0 0 auto
+		position: relative
+		z-index: 5
+		align-self: center
+		width: 300px
+		height: 300px
+		background-image: url(../img/myPhoto.jpg)
+		background-size: cover
+		background-position: center
+		border-radius: 100%
+		margin-left: 50px
+		box-shadow: inset 0 0 20px #41FFD0,
+					0 0 20px #41FFD0
+		transform: rotateX(90deg)
+		animation: photoAnim .5s linear
+		animation-delay: .5s
+		animation-fill-mode: forwards
+	&__greeting
+		position: absolute
+		bottom: -20px
+		right: -260px
+		width: 300px
+		height: 60px
+		background-color: white
+		border-radius: 30px
+		box-shadow: 0 0 5px 5px #41FFD0
+		opacity: 0
+		animation: showObject .3s linear
+		animation-fill-mode: forwards
+		animation-delay: 1.3s
+	&__text
+		position: relative
+		font-size: 18px
+		padding: 20px
+		&:before
+			position: absolute
+			content: ''
+			display: block
+			top: -25px
+			left: -25px
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			background-color: white
+			box-shadow: 0 0 2px 2px #41FFD0
+		&:after
+			position: absolute
+			content: ''
+			display: block
+			top: -45px
+			left: -45px
+			width: 20px
+			height: 20px
+			border-radius: 50%
+			background-color: white
+			box-shadow: 0 0 2px 2px #41FFD0
+	&__infoWrap
+		align-self: center
+		flex: 0 1 45%
+		height: 300px
+		opacity: 0
+		animation: showObject .3s linear
+		animation-fill-mode: forwards
+		animation-delay: 1.3s
+		h1
+			font-size: 50px
+			font-family: 'furoreregular'
+			color: #DB9B04
+		h2
+			font-size: 35px
+			font-family: 'cuprumbold'
+			color: #DB9B04
+			line-height: 50px
+		p
+			font-size: 16px
+			color: white

@@ -13,30 +13,31 @@ $xxldesktop = 1980px
 
 // main style
 body
-	font-family: 'robotoregular'
-	font-size: 14px
+	font-family: 'cuprumregular'
+	font-size: 16px
 	color: #333
 	min-width: 320px
-	main.wrap
-		display: flex
-		flex-direction: column
-		margin: 0 auto
+	overflow: hidden
+.container
+	margin: 0 auto
+p
+	line-height: 20px
 
 // adaptive
 @media (max-width: $xxldesktop)
-	main.wrap
+	.container
 		width: $xdesktop
 @media (max-width: $xdesktop)
-	main.wrap
+	.container
 		width: $desktop
 @media (max-width: $desktop)
-	main.wrap
+	.container
 		width: $tablet
 @media (max-width: $tablet)
-	main.wrap
+	.container
 		width: $phone
 @media (max-width: $phone)
-	main.wrap
+	.container
 		width: 90%
 
 
