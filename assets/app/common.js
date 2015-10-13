@@ -5,7 +5,7 @@ $(document).ready(function() {
 		var variableSkill = Number(persentSkill.match(/\d+/));
 		var heightSkillLevel = 100 - variableSkill;
 		$(this).closest('.characteristics__mySkill').find('.characteristics__skillLevel').css('top', heightSkillLevel + '%');
-		// Ширина и высота овала с шагом 5
+		// Установка ширины и высоты овала с шагом 5
 		switch(variableSkill) {
 			case 0:
 				$(this).closest('.characteristics__mySkill').find('.characteristics__skillOval').width(0).height(0);
