@@ -1,3 +1,132 @@
+@keyframes skillItemMove {
+	0% {
+		transform: rotate(0)
+	}
+	25% {
+		transform: rotate(15deg)
+	}
+	50% {
+		transform: rotate(-15deg)
+	}
+	75% {
+		transform: rotate(15deg)
+	}
+	100% {
+		transform: rotate(0)
+	}
+}
+@keyframes skillItemLevel {
+	0% {
+		transform-origin: center top
+		transform: rotate(0)
+	}
+	15% {
+		transform-origin: center top
+		transform: rotate(25deg)
+	}
+	30% {
+		transform-origin: center top
+		transform: rotate(-25deg)
+	}
+	45% {
+		transform-origin: center top
+		transform: rotate(20deg)
+	}
+	60% {
+		transform-origin: center top
+		transform: rotate(-20deg)
+	}
+	75% {
+		transform-origin: center top
+		transform: rotate(15deg)
+	}
+	90% {
+		transform-origin: center top
+		transform: rotate(-15deg)
+	}
+	100% {
+		transform-origin: center top
+		transform: rotate(0)
+	}
+}
 .characteristics
-	height: 1000px
-	background-color: yellow
+	&__wrap
+		display: flex
+		flex-flow: row wrap
+	&__mainTitle
+		display: inline-block
+		font-size: 34px
+		font-family: 'cuprumbold'
+		margin-left: 20px
+		padding: 30px 100px 5px 0
+		border-bottom: 1px solid #DB9B04
+	&__item
+		display: flex
+		flex: 1 0 50%
+		min-height: 210px
+		padding-top: 30px
+		&:hover .characteristics__mySkill
+			animation: skillItemMove .5s ease
+			animation-fill-mode: forwards
+		&:hover .characteristics__skillLevel
+			animation: skillItemLevel 1s ease
+			animation-fill-mode: forwards
+	&__mySkill
+		flex: 0 0 auto
+		position: relative
+		height: 200px
+		width: 200px
+		margin: 0 20px
+		border-radius: 50%
+		overflow: hidden
+		border: 1px solid #91CDFF
+		box-shadow: inset 0 0 80px #91CDFF
+		&:before
+			position: absolute
+			top: -77px
+			left: -45px
+			content: ''
+			display: block
+			height: 200px
+			width: 280px
+			border-radius: 50%
+			border: 5px solid #0F0F0F
+	&__aboutSkill
+		padding-right: 20px
+	&__titleItem
+		font-family: 'furoreregular'
+		font-size: 24px
+		margin-bottom: 15px
+		color: #DB9B04
+	&__percentSkill
+		position: relative
+		width : 90px
+		margin: 103px auto 0
+		font-family: 'furoreregular'
+		font-size: 27px
+		color: #DB9B04
+		padding: 10px 0
+		text-align: center
+		border-radius: 10px
+		background-color: #0F0F0F
+		z-index: 10
+		box-shadow: 3px -6px #383838,
+					2.5px -5px #383838,
+					2px -4px #383838,
+					1.5px -3px #383838,
+					1px -2px #383838,
+					.5px -1px #383838
+	&__skillLevel
+		display: flex
+		width: 300px
+		height: 200px
+		position: absolute
+		left: -50px
+		background: #506AFF
+		z-index: -10
+	&__skillOval
+		position: relative
+		margin: auto
+		border-radius: 50%
+		background-color: #738DEA
+		top: -100px
