@@ -1,0 +1,52 @@
+.skills
+	padding: 30px 0
+	&__wrap
+		display: flex
+		justify-content: space-between
+		padding: 0 75px
+	&__ColumnForList
+		flex: 0 0 48%
+		transform: skewX(20deg)
+		background-color: #353535
+		border-radius: 50px 25px 50px 25px
+	&__title
+		font-size: 20px
+		font-family: 'furoreregular'
+		color: #DB9B04
+		transform: skewX(-20deg)
+		padding: 15px 30px 0 40px
+	&__list
+		padding: 20px 30px 10px
+	&__listItem
+		display: flex
+		margin-bottom: 15px
+	&__wrapSquares
+		display: flex
+		justify-content: space-between
+		width: 125px
+	&__squareItem
+		width: 20px
+		height: 20px
+		border-radius: 25%
+		background-color: white
+		border: 1px solid #D0D5DA
+		transform: skewX(-20deg)
+		box-shadow: inset 2px 2px 6px 1px #353535
+		&.active1, &.active2, &.active3, &.active4, &.active5
+			box-shadow: inset 1px 1px 6px 1px #353535
+		&.active1
+			background-color: #F51201
+		&.active2
+			background-color: #FD8201
+		&.active3
+			background-color: #FEFF03
+		&.active4
+			background-color: #CCCD1A
+		&.active5
+			background-color: #4CA040
+	&__nameSkill
+		margin-left: 15px
+		color: white
+		transform: skewX(-20deg)
+		text-transform: uppercase
+		line-height: 22px
