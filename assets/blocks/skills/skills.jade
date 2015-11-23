@@ -10,9 +10,10 @@ mixin skillListItem(skillName, active1, active2, active3, active4, active5)
 		.skills__nameSkill= skillName
 .skills
 	.container
+		h3.skills__title Личностные характеристики
 		.skills__wrap
 			.skills__ColumnForList
-				h4.skills__title Личностные характеристики
+				//- h4.skills__title Личностные характеристики
 				ul.skills__list
 					+skillListItem('Обучаемость', 'active1', 'active2', 'active3', 'active4')
 					+skillListItem('Инициативность', 'active1', 'active2', 'active3')
@@ -25,4 +26,15 @@ mixin skillListItem(skillName, active1, active2, active3, active4, active5)
 					+skillListItem('Работа в команде', 'active1', 'active2', 'active3', 'active4')
 
 			.skills__ColumnForList
+				//- h4.skills__title Личностные характеристики
+				ul.skills__list
+					+skillListItem('Обучаемость', 'active1', 'active2', 'active3', 'active4')
+					+skillListItem('Инициативность', 'active1', 'active2', 'active3')
+					+skillListItem('Находчивость', 'active1', 'active2', 'active3')
+					+skillListItem('Стрессоустойчивость', 'active1', 'active2', 'active3')
+					+skillListItem('Комуникабельность', 'active1', 'active2')
+					+skillListItem('Общительность', 'active1', 'active2')
+					+skillListItem('Планирование', 'active1', 'active2')
+					+skillListItem('Креативность', 'active1', 'active2', 'active3', 'active4', 'active5')
+					+skillListItem('Работа в команде', 'active1', 'active2', 'active3', 'active4')
 // end skills

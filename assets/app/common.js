@@ -72,4 +72,14 @@ $(document).ready(function() {
 				break;
 		}
 	});
+	// Функционал слайдера
+	var angle = 0;
+	$('.myWorks__arrowLeft').click(function() {
+		angle = angle + 45;
+		$('.myWorks__sliderContainer').css('transform', 'rotateY(' + angle + 'deg)');
+	});
+	$('.myWorks__arrowRight').click(function() {
+		angle = angle - 45;
+		$('.myWorks__sliderContainer').css('transform', 'rotateY(' + angle + 'deg)');
+	});
 });

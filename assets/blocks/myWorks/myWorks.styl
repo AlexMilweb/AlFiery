@@ -1,3 +1,74 @@
 .myWorks
-	height: 500px
-	background-color: grey
+	background: #000
+	&__title
+		display: inline-block
+		font-size: 34px
+		color: white
+		font-family: 'cuprumbold'
+		margin-left: 20px
+		padding: 30px 100px 5px 0
+		border-bottom: 1px solid #DB9B04
+	&__viewWrap
+		position: relative
+		perspective: 1600px
+		perspective-origin: center -50px
+		height: 1100px
+		padding-top: 50px
+	&__arrowLeft, &__arrowRight
+		position: absolute
+		width: 100px
+		height: 100px
+		border: 50px solid transparent
+		box-sizing: border-box
+		z-index: 100
+		top: 450px
+		cursor: pointer
+		transition: all .4s
+		&:hover
+			transform: scale(1.2)
+	&__arrowLeft
+		left: 100px
+		border-right: 50px solid #003597
+		&:hover
+			border-right: 50px solid #184DAF
+	&__arrowRight
+		right: 100px
+		border-left: 50px solid #003597
+		&:hover
+			border-left: 50px solid #184DAF
+	&__sliderContainer, &__sideItem
+		width: 500px
+		height: 500px
+	&__sliderContainer
+		margin: 0 auto
+		transform-style: preserve-3d
+		position: relative
+		transition: all .4s
+	&__sideItem
+		position: absolute
+		background: #02197B
+		overflow-y: auto
+		border: 10px solid #C48415
+		box-sizing: border-box
+		img
+			width: 100%
+	&__side1
+		transform: translateZ(600px)
+	&__side2
+		transform: translateZ(600px) translateX(500px) rotateY(45deg)
+		transform-origin: left center
+	&__side8
+		transform: translateZ(600px) translateX(-500px) rotateY(-45deg)
+		transform-origin: right center
+	&__side3
+		transform: translateX(600px) rotateY(90deg)
+	&__side7
+		transform: translateX(-600px) rotateY(-90deg)
+	&__side5
+		transform: translateZ(-600px) rotateY(180deg)
+	&__side4
+		transform: translateZ(-600px) rotateY(225deg)
+		transform-origin: left center
+	&__side6
+		transform: translateZ(-600px) rotateY(135deg)
+		transform-origin: right center
